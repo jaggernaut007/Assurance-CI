@@ -16,7 +16,7 @@ Assurance-CI is a GitHub Actions pipeline that converts a Jira story into BDD/Pl
 
 ```bash
 # 1. Clone and enter the repo
-git clone https://github.com/shreynp/Assurance-CI && cd Assurance-CI
+git clone https://github.com/jaggernaut007/Assurance-CI && cd Assurance-CI
 
 # 2. Install Python dependencies
 pip install -e ".[dev]"

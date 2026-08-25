@@ -128,7 +128,7 @@ Three stories against the existing Protect AI (`/Users/shreyas/Dev/protect`) AI-
 ---
 
 ## Supporting-Domain Stubs
-- **Simulated JIRA store**: static story files in `/jira/PROT-NNN.md` — served via GitHub Pages (`https://shreynp.github.io/Assurance-CI`) in CI, read from disk locally; no live JIRA API
+- **Simulated JIRA store**: static story files in `/jira/PROT-NNN.md` — served via GitHub Pages (`https://jaggernaut007.github.io/Assurance-CI`) in CI, read from disk locally; no live JIRA API
 - **Build context assembler**: `build_context.py` — extracts changed symbols, type signatures, imports, file contents, and existing tests from the diff; tree-sitter for TS/TSX/JS/JSX, Python AST for `.py`; pure data extraction, no generation logic
 - **Agentic generation step**: `claude-code-action@v1` running the `/test-generation` skill — invokes Claude with context payload + story acceptance criteria; max-turns 25; `continue-on-error: true` so the pipeline always reaches append/record
 - **PR body builder**: `build_pr_body.py` — renders a PR comment with gate result, test counts, RCA table (parsed from pytest `--tb=short`), and a Claude Haiku–generated plain-English RCA summary; Haiku call is best-effort (fails silently)

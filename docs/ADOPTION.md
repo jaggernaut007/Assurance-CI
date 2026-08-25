@@ -6,7 +6,7 @@ This guide walks you through wiring Assurance-CI into a project other than `prot
 
 ## 1. Fork the Repo
 
-Fork `shreynp/Assurance-CI` or copy the directory structure into your own repo. The pipeline lives entirely in `.github/workflows/assurance.yml` and the `scripts/` and `.claude/` directories.
+Fork `jaggernaut007/Assurance-CI` or copy the directory structure into your own repo. The pipeline lives entirely in `.github/workflows/assurance.yml` and the `scripts/` and `.claude/` directories.
 
 ---
 

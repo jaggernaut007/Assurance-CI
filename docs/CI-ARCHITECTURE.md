@@ -196,7 +196,7 @@ Variables injected by `assurance.yml` into the agentic step and downstream scrip
 | `BASE_URL` | `http://localhost:3000` | CI | Live server URL for HTTP tests; CI can override with real host |
 | `TARGET_URL` | `http://localhost:3000` | CI | Alias for `BASE_URL` used by some test patterns |
 | `TEST_BEARER_TOKEN` | `valid-test-token` | CI | Auth token for authenticated endpoint tests; real value injected from secrets |
-| `JIRA_DATA_URL` | `https://shreynp.github.io/Assurance-CI` | CI | GitHub Pages base URL for `fetch_jira_ticket.py` |
+| `JIRA_DATA_URL` | `https://jaggernaut007.github.io/Assurance-CI` | CI | GitHub Pages base URL for `fetch_jira_ticket.py` |
 | `DISPATCH_STORY_ID` | — | `workflow_dispatch` input | Overrides commit-message detection when set via manual trigger |
 | `ANTHROPIC_API_KEY` | — | Secret (required) | API key for the `claude-code-action@v1` agentic loop and the `build_pr_body.py` RCA summary call |
 
@@ -367,7 +367,7 @@ _AC_PATTERN = re.compile(r"^-\s+AC\d+:\s+(.+)$", re.MULTILINE)
 
 Prose-style bold headings (`**AC1 — Title**`) are for human readability and may coexist, but the parser ignores them. If no `- ACN:` bullets are present, `story_parser.py` raises `ValueError: No acceptance criteria found` and the CI run fails at the generate step.
 
-When served via GitHub Pages, the URL is `https://shreynp.github.io/Assurance-CI/PROT-NNN.md` — fetched by `scripts/fetch_jira_ticket.py` using `JIRA_DATA_URL` env var.
+When served via GitHub Pages, the URL is `https://jaggernaut007.github.io/Assurance-CI/PROT-NNN.md` — fetched by `scripts/fetch_jira_ticket.py` using `JIRA_DATA_URL` env var.
 
 ---
 
