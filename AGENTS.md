@@ -89,3 +89,12 @@ All gated by `/ship-it` skill — it enforces these mechanically:
 2. `./scripts/init.sh` — fix before new work
 3. Check `docs/adr/` before guessing at past decisions
 4. Check `feature_list.json` for current feature state
+
+## Cross-harness compatibility
+`AGENTS.md` is the single source of truth for every agent harness driving this repo. Per-tool bridges:
+- Claude Code → `CLAUDE.md` (`@import AGENTS.md`) + `.claude/rules/`
+- Codex CLI → reads this file natively (keep it lean)
+- Cline → `.clinerules/00-source-of-truth.md`; no parallel Memory Bank
+- Antigravity CLI → `GEMINI.md` thin bridge, speculative until its discovery mechanism is documented
+Durable rules go here (portable) — never into a tool-specific file.
+
