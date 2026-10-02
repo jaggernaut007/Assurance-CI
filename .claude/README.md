@@ -15,7 +15,7 @@ This directory configures Claude Code for the Assurance-CI project. It is read a
     design-system.md     ← UI design tokens (Pfizer blue / clinical navy)
   agents/
     test-writer.md       ← writes .feature + test_*.py into generated/$STORY_ID/
-    research-assistant.md ← vets libraries/APIs before integration
+    (research-assistant is a user-level agent now: ~/.claude/agents/research-assistant.md)
     docs-writer.md       ← keeps PROGRESS.md, ADRs, REGISTER.md in sync
   skills/
     test-generation/
