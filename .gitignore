@@ -15,3 +15,4 @@ dist/
 *.jpg
 *.jpeg
 .agent-audit/*.jsonl
+.nexus/

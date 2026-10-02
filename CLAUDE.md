@@ -31,3 +31,10 @@
 - External library: run `research-assistant` before suggesting any new dep — batch multiple libs in one invocation, don't spawn per-library
 - **Context7 mandatory** — before writing any code that calls `anthropic` SDK, `pytest-bdd`, `playwright`, `httpx`, or `streamlit` APIs: resolve the library via context7 first. Non-negotiable. Wrong-version code → test failure → diagnosis → fix → retest is the most expensive loop in this project.
 - GitHub Actions `pip install`: cross-check package names against actual SDK imports in source
+
+### Code search (Nexus MCP)
+- The nexus tools are deferred. Run ToolSearch with `select:mcp__nexus__index,mcp__nexus__search,mcp__nexus__map,mcp__nexus__find_symbol,mcp__nexus__graph,mcp__nexus__explain`.
+- At session start, call `index` with the absolute path of the working folder.
+- To find files or code, call `search` or `find_symbol` before Grep or Glob. Read only the files that nexus names.
+- Before you change a shared symbol, call `graph` with `transitive=true`.
+- The current tools are `status`, `index`, `map`, `search`, `find_symbol`, `graph`, `explain`, `analyze`, `memory` and `health`.
