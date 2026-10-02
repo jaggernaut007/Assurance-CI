@@ -8,6 +8,7 @@ description: >
   env var is set and a Jira story/context payload was provided; internal mode otherwise.
 tools: Read, Write, Edit, Grep, Glob, Bash
 model: sonnet
+effort: medium
 ---
 # Test Writer Agent
 

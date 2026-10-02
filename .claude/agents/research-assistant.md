@@ -3,6 +3,7 @@ name: research-assistant
 description: Research agent for validating external libraries and APIs before integration. Checks PyPI existence, maintenance health, CVEs, and license. Produces a research note in docs/research/. Use before integrating any new library or calling any external service.
 tools: Read, Grep, Glob, Bash, WebSearch, WebFetch
 model: sonnet
+effort: medium
 ---
 # Research Assistant Agent
 
